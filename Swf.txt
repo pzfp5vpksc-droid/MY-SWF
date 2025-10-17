@@ -1,0 +1,54 @@
+
+local args = {}
+
+game:GetService("ReplicatedStorage"):WaitForChild("loadCharRemote", 9e9):FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = BrickColor.new("Really red");
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TeamEvent", 9e9):FireServer(unpack(args))
+
+wait(2)
+
+local Newpos = Vector3.new(8811.943359, 26.874338, -2714.944824)
+local hrp = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+if hrp then hrp.CFrame = CFrame.new(Newpos)
+end
+
+wait(2)
+local args = {
+    [1] = false;
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AfkEvent", 9e9):FireServer(unpack(args))
+
+local VirtualUser = game:GetService('VirtualUser')
+
+game:GetService('Players').LocalPlayer.Idled:Connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+        
+end)
+
+wait(5)
+game:GetService('Players').LocalPlayer.Idled:Connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+        
+end)
+
+wait(5)
+
+game:GetService('Players').LocalPlayer.Idled:Connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+        
+end)
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "AntiAFK Upload",
+Text = "Made by Bignoahalt",
+    Duration = 3
+})
+
