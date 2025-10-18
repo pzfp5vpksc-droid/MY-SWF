@@ -1,7 +1,8 @@
-
-local args = {}
-
-game:GetService("ReplicatedStorage"):WaitForChild("loadCharRemote", 9e9):FireServer(unpack(args))
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "FARMING STARTED",
+Text = "BY ICATCHDIMES117",
+    Duration = 3
+})
 wait(1)
 local args = {
     [1] = BrickColor.new("Really red");
@@ -47,8 +48,7 @@ VirtualUser:ClickButton2(Vector2.new())
         
 end)
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "AntiAFK Upload",
-Text = "Made by Bignoahalt",
+Title = "FARMER FINISHED",
+Text = "BY ICATCHDIMES117",
     Duration = 3
 })
-
